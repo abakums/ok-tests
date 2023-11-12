@@ -1,0 +1,30 @@
+plugins {
+    id 'java'
+    id 'com.android.application' version "8.1.2" apply false
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+def junitVersion = "5.8.2",
+    slf4jVersion = "1.7.32"
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation(
+            "com.codeborne:selenide:5.25.0",
+            "io.appium:java-client:7.6.0",
+            "org.aeonbits.owner:owner:1.0.12",
+            "io.rest-assured:rest-assured:4.4.0",
+            "org.junit.jupiter:junit-jupiter-api:$junitVersion")
+    testRuntimeOnly(
+            "org.slf4j:slf4j-simple:$slf4jVersion",
+            "org.junit.jupiter:junit-jupiter-engine:$junitVersion")
+}
+
+test {
+    useJUnitPlatform()
+}
