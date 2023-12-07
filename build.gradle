@@ -9,10 +9,6 @@ version '1.0-SNAPSHOT'
 def junitVersion = "5.8.2",
     slf4jVersion = "1.7.32"
 
-repositories {
-    mavenCentral()
-}
-
 dependencies {
     testImplementation(
             "com.codeborne:selenide:5.25.0",
