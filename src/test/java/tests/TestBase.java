@@ -1,6 +1,8 @@
 package tests;
 
 
+import static com.codeborne.selenide.Selenide.$;
+
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.logevents.SelenideLogger;
@@ -13,6 +15,7 @@ import config.ConfigReader;
 import io.qameta.allure.Allure;
 import io.qameta.allure.selenide.AllureSelenide;
 import listeners.AllureListener;
+import pages.AuthorizationPage;
 
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
@@ -108,6 +111,9 @@ public class TestBase {
     @BeforeEach
     public void startDriver() {
         step("Открыть приложение", (Allure.ThrowableRunnableVoid) Selenide::open);
+        //TODO login
+        AuthorizationPage authorizationPage = new AuthorizationPage();
+        authorizationPage.login();
     }
 
     /**
@@ -115,6 +121,9 @@ public class TestBase {
      */
     @AfterEach
     public void afterEach() {
+        //TODO logout
+        AuthorizationPage authorizationPage = new AuthorizationPage();
+        authorizationPage.logout();
         step("Закрыть приложение", Selenide::closeWebDriver);
     }
 }
