@@ -53,9 +53,7 @@ public class Navigator {
     private void handleMoreMenu(Route.SIDE_MENU.MORE route) {
         openSideMenu();
         SelenideElement moreMenu = $(MobileBy.xpath("//android.view.ViewGroup[@content-desc=\"Ещё\"]"));
-
         if(moreMenu.exists()) moreMenu.click();
-
         appendBreadcrumb("Боковое меню/Ещё");
         appendBreadcrumb(route.toString());
     }
