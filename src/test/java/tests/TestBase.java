@@ -16,6 +16,8 @@ import io.qameta.allure.Allure;
 import io.qameta.allure.selenide.AllureSelenide;
 import listeners.AllureListener;
 import pages.AuthorizationPage;
+import pages.MainPage;
+import pages.navigator.Navigator;
 
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
@@ -40,6 +42,9 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
  */
 @ExtendWith(AllureListener.class)
 public class TestBase {
+    protected Navigator navigator = new Navigator();
+    protected MainPage mainPage = new MainPage();
+
 
     @BeforeAll
     public static void setup() {
@@ -122,8 +127,8 @@ public class TestBase {
     @AfterEach
     public void afterEach() {
         //TODO logout
-        AuthorizationPage authorizationPage = new AuthorizationPage();
-        authorizationPage.logout();
+        MainPage mainPage = new MainPage();
+        mainPage.logout();
         step("Закрыть приложение", Selenide::closeWebDriver);
     }
 }
