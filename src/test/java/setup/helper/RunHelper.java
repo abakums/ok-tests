@@ -1,7 +1,7 @@
-package helper;
+package setup.helper;
 
-import config.ConfigReader;
-import driver.EmulatorDriver;
+import setup.config.ConfigReader;
+import setup.driver.EmulatorDriver;
 
 /**
  * Класс помощник для создания универсального инстанса AndroidDriver

@@ -1,4 +1,4 @@
-package pages;
+package common.pages;
 
 import static com.codeborne.selenide.Selenide.$;
 

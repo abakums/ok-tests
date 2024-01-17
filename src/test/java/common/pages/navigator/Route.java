@@ -1,6 +1,6 @@
-package pages.navigator;
+package common.pages.navigator;
 
-import model.FieldTitle;
+import common.model.FieldTitle;
 
 public class Route {
     public enum SIDE_MENU implements FieldTitle {

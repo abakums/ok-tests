@@ -1,7 +1,10 @@
-package tests;
+package common;
 
-
-import static com.codeborne.selenide.Selenide.$;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static io.qameta.allure.Allure.step;
+import static setup.helper.Constants.SCREENSHOT_TO_SAVE_FOLDER;
+import static setup.helper.DeviceHelper.executeBash;
+import static setup.helper.RunHelper.runHelper;
 
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.Selenide;
@@ -10,14 +13,6 @@ import com.github.romankh3.image.comparison.ImageComparison;
 import com.github.romankh3.image.comparison.ImageComparisonUtil;
 import com.github.romankh3.image.comparison.model.ImageComparisonResult;
 import com.github.romankh3.image.comparison.model.ImageComparisonState;
-
-import config.ConfigReader;
-import io.qameta.allure.Allure;
-import io.qameta.allure.selenide.AllureSelenide;
-import listeners.AllureListener;
-import pages.AuthorizationPage;
-import pages.MainPage;
-import pages.navigator.Navigator;
 
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
@@ -28,14 +23,15 @@ import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
-
 import java.nio.file.StandardCopyOption;
 
-import static helper.Constants.SCREENSHOT_TO_SAVE_FOLDER;
-import static helper.DeviceHelper.executeBash;
-import static helper.RunHelper.runHelper;
-import static io.qameta.allure.Allure.step;
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import common.pages.AuthorizationPage;
+import common.pages.MainPage;
+import common.pages.navigator.Navigator;
+import io.qameta.allure.Allure;
+import io.qameta.allure.selenide.AllureSelenide;
+import setup.config.ConfigReader;
+import setup.listeners.AllureListener;
 
 /**
  * Базовый тестовый класс

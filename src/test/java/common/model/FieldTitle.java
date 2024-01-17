@@ -1,4 +1,4 @@
-package model;
+package common.model;
 
 import org.openqa.selenium.By;
 

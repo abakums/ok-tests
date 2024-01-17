@@ -8,27 +8,25 @@ apply from: 'dependencies.gradle'
 group 'com.example'
 version '1.0-SNAPSHOT'
 
-allprojects {
-    repositories {
-        mavenCentral()
-    }
+repositories {
+    mavenCentral()
 }
 
-subprojects {
-    dependencies {
-        testImplementation(
-                "com.github.romankh3:image-comparison:$imageComparisonVersion",
-                "io.qameta.allure:allure-junit5:$allureVersion",
-                "com.codeborne:selenide:$selenideVersion",
-                "io.qameta.allure:allure-selenide:$allureVersion",
-                "io.appium:java-client:$appiumVersion",
-                "org.aeonbits.owner:owner:$ownerVersion",
-                "io.rest-assured:rest-assured:$restAssuredVersion")
 
-        testRuntimeOnly(
-                "org.slf4j:slf4j-simple:$slf4jVersion",
-                "org.junit.jupiter:junit-jupiter-engine:$junitVersion")
-    }
+dependencies {
+    testImplementation(
+            "com.github.romankh3:image-comparison:$imageComparisonVersion",
+            "io.qameta.allure:allure-junit5:$allureVersion",
+            "com.codeborne:selenide:$selenideVersion",
+            "io.qameta.allure:allure-selenide:$allureVersion",
+            "io.appium:java-client:$appiumVersion",
+            "org.aeonbits.owner:owner:$ownerVersion",
+            "io.rest-assured:rest-assured:$restAssuredVersion",
+            "org.junit.jupiter:junit-jupiter:$junitVersion")
+
+    testRuntimeOnly(
+            "org.slf4j:slf4j-simple:$slf4jVersion",
+            "org.junit.jupiter:junit-jupiter-engine:$junitVersion")
 }
 
 

@@ -1,18 +1,15 @@
-package pages;
+package common.pages;
 
 import static com.codeborne.selenide.Condition.appear;
 import static com.codeborne.selenide.Selenide.$;
 
 import com.codeborne.selenide.SelenideElement;
 
-import org.openqa.selenium.By;
-
 import java.util.Arrays;
 import java.util.Map;
 
 import io.appium.java_client.MobileBy;
-import io.qameta.allure.Step;
-import model.AuthorizationField;
+import common.model.AuthorizationField;
 
 public class AuthorizationPage {
 

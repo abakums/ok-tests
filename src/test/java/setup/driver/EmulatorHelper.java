@@ -1,4 +1,4 @@
-package driver;
+package setup.driver;
 
 import com.codeborne.selenide.SelenideElement;
 import io.appium.java_client.android.nativekey.AndroidKey;

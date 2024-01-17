@@ -1,9 +1,9 @@
-package driver;
+package setup.driver;
 
 import com.codeborne.selenide.WebDriverProvider;
 
-import config.ConfigReader;
-import helper.ApkInfoHelper;
+import setup.config.ConfigReader;
+import setup.helper.ApkInfoHelper;
 import io.appium.java_client.android.AndroidDriver;
 
 import io.appium.java_client.remote.AndroidMobileCapabilityType;

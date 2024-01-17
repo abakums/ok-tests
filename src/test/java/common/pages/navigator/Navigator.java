@@ -1,10 +1,10 @@
-package pages.navigator;
+package common.pages.navigator;
 
 import static com.codeborne.selenide.Selenide.$;
 
 import com.codeborne.selenide.SelenideElement;
 import io.appium.java_client.MobileBy;
-import model.FieldTitle;
+import common.model.FieldTitle;
 
 public class Navigator {
     private final SelenideElement sideMenuBtn = $(MobileBy.xpath("//android.widget.ImageButton[@content-desc=\"Открыть боковое меню\"]"));
