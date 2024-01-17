@@ -1,4 +1,4 @@
-package setup.helper;
+package configurations.helper;
 
 import java.io.BufferedReader;
 import java.io.IOException;

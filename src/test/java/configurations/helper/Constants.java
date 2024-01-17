@@ -1,4 +1,4 @@
-package setup.helper;
+package configurations.helper;
 
 /**
  * Констаты проекта

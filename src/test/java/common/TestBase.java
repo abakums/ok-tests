@@ -2,9 +2,9 @@ package common;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static io.qameta.allure.Allure.step;
-import static setup.helper.Constants.SCREENSHOT_TO_SAVE_FOLDER;
-import static setup.helper.DeviceHelper.executeBash;
-import static setup.helper.RunHelper.runHelper;
+import static configurations.helper.Constants.SCREENSHOT_TO_SAVE_FOLDER;
+import static configurations.helper.DeviceHelper.executeBash;
+import static configurations.helper.RunHelper.runHelper;
 
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.Selenide;
@@ -30,8 +30,8 @@ import common.pages.MainPage;
 import common.pages.navigator.Navigator;
 import io.qameta.allure.Allure;
 import io.qameta.allure.selenide.AllureSelenide;
-import setup.config.ConfigReader;
-import setup.listeners.AllureListener;
+import configurations.config.ConfigReader;
+import configurations.listeners.AllureListener;
 
 /**
  * Базовый тестовый класс
