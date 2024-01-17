@@ -1,0 +1,10 @@
+ext {
+    imageComparisonVersion = '4.4.0'
+    allureVersion = '2.19.0'
+    selenideVersion = '5.25.0'
+    appiumVersion = '7.6.0'
+    ownerVersion = '1.0.12'
+    restAssuredVersion = '4.4.0'
+    junitVersion = '5.8.2'
+    slf4jVersion = '1.7.32'
+}

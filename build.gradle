@@ -3,31 +3,34 @@ plugins {
     id "io.qameta.allure" version "2.9.6"
 }
 
-group 'org.example'
+apply from: 'dependencies.gradle'
+
+group 'com.example'
 version '1.0-SNAPSHOT'
 
-def allureVersion = "2.19.0",
-    junitVersion = "5.8.2",
-    slf4jVersion = "1.7.32"
-
-repositories {
-    mavenCentral()
+allprojects {
+    repositories {
+        mavenCentral()
+    }
 }
 
-dependencies {
-    testImplementation 'com.github.romankh3:image-comparison:4.4.0'
-    testImplementation(
-            "io.qameta.allure:allure-junit5:$allureVersion",
-            "com.codeborne:selenide:5.25.0",
-            "io.qameta.allure:allure-selenide:$allureVersion",
-            "io.appium:java-client:7.6.0",
-            "org.aeonbits.owner:owner:1.0.12",
-            "io.rest-assured:rest-assured:4.4.0",
-            "org.junit.jupiter:junit-jupiter-api:$junitVersion")
-    testRuntimeOnly(
-            "org.slf4j:slf4j-simple:$slf4jVersion",
-            "org.junit.jupiter:junit-jupiter-engine:$junitVersion")
+subprojects {
+    dependencies {
+        testImplementation(
+                "com.github.romankh3:image-comparison:$imageComparisonVersion",
+                "io.qameta.allure:allure-junit5:$allureVersion",
+                "com.codeborne:selenide:$selenideVersion",
+                "io.qameta.allure:allure-selenide:$allureVersion",
+                "io.appium:java-client:$appiumVersion",
+                "org.aeonbits.owner:owner:$ownerVersion",
+                "io.rest-assured:rest-assured:$restAssuredVersion")
+
+        testRuntimeOnly(
+                "org.slf4j:slf4j-simple:$slf4jVersion",
+                "org.junit.jupiter:junit-jupiter-engine:$junitVersion")
+    }
 }
+
 
 test {
     useJUnitPlatform()
