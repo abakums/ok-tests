@@ -11,7 +11,7 @@ public enum AuthorizationField implements FieldTitle{
 
     ;
 
-    public static AuthorizationField[] ALL_FIELDS = {
+    public static final AuthorizationField[] ALL_FIELDS = {
         LOGIN, PASSWORD
     };
 
@@ -28,11 +28,6 @@ public enum AuthorizationField implements FieldTitle{
     AuthorizationField(String title){
         this.title = title;
         this.by = null;
-    }
-
-    AuthorizationField(String title, By by){
-        this.title = title;
-        this.by = by;
     }
 
     @Override

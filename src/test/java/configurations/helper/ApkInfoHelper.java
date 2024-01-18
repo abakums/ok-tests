@@ -1,13 +1,13 @@
 package configurations.helper;
 
-import configurations.config.ConfigReader;
+import static configurations.helper.DeviceHelper.executeSh;
 
 import java.io.IOException;
 import java.util.concurrent.ExecutionException;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import static configurations.helper.DeviceHelper.*;
+import configurations.config.ConfigReader;
 
 /**
  * Класс помощник для извлечения информации из Apk файла через bash команды

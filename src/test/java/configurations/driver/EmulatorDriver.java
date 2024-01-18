@@ -1,22 +1,22 @@
 package configurations.driver;
 
+import static org.junit.jupiter.api.Assertions.assertTrue;
+
 import com.codeborne.selenide.WebDriverProvider;
 
-import configurations.config.ConfigReader;
-import configurations.helper.ApkInfoHelper;
-import io.appium.java_client.android.AndroidDriver;
-
-import io.appium.java_client.remote.AndroidMobileCapabilityType;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
-
-import javax.annotation.Nonnull;
 
 import java.io.File;
 import java.net.MalformedURLException;
 import java.net.URL;
 
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import javax.annotation.Nonnull;
+
+import configurations.config.ConfigReader;
+import configurations.helper.ApkInfoHelper;
+import io.appium.java_client.android.AndroidDriver;
+import io.appium.java_client.remote.AndroidMobileCapabilityType;
 
 /**
  * Класс для инициализации AndroidDriver

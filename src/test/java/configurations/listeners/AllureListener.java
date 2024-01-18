@@ -1,12 +1,14 @@
 package configurations.listeners;
 
 import com.codeborne.selenide.Selenide;
-import io.qameta.allure.Attachment;
+
 import org.junit.jupiter.api.extension.AfterTestExecutionCallback;
 import org.junit.jupiter.api.extension.ExtensionContext;
 import org.openqa.selenium.OutputType;
 
 import java.lang.reflect.Method;
+
+import io.qameta.allure.Attachment;
 
 /**
  * Кастомный листенер для переопределения логики завершения теста

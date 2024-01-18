@@ -1,10 +1,10 @@
 package common;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static io.qameta.allure.Allure.step;
 import static configurations.helper.Constants.SCREENSHOT_TO_SAVE_FOLDER;
 import static configurations.helper.DeviceHelper.executeBash;
 import static configurations.helper.RunHelper.runHelper;
+import static io.qameta.allure.Allure.step;
 
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.Selenide;
@@ -28,10 +28,10 @@ import java.nio.file.StandardCopyOption;
 import common.pages.AuthorizationPage;
 import common.pages.MainPage;
 import common.pages.navigator.Navigator;
-import io.qameta.allure.Allure;
-import io.qameta.allure.selenide.AllureSelenide;
 import configurations.config.ConfigReader;
 import configurations.listeners.AllureListener;
+import io.qameta.allure.Allure;
+import io.qameta.allure.selenide.AllureSelenide;
 
 /**
  * Базовый тестовый класс

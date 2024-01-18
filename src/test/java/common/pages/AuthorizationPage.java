@@ -8,8 +8,8 @@ import com.codeborne.selenide.SelenideElement;
 import java.util.Arrays;
 import java.util.Map;
 
-import io.appium.java_client.MobileBy;
 import common.model.AuthorizationField;
+import io.appium.java_client.MobileBy;
 
 public class AuthorizationPage {
 
