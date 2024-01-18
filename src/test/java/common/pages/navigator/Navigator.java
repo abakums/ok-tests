@@ -3,6 +3,7 @@ package common.pages.navigator;
 import static com.codeborne.selenide.Selenide.$;
 
 import com.codeborne.selenide.SelenideElement;
+
 import io.appium.java_client.MobileBy;
 import common.model.FieldTitle;
 
@@ -39,6 +40,7 @@ public class Navigator {
         openSideMenu();
         SelenideElement menuItem = $(MobileBy.xpath("//android.view.ViewGroup[@content-desc=\"" + route.toString() + "\"]"));
         assert menuItem.exists();
+        menuItem.click();
         appendBreadcrumb("Боковое меню");
         appendBreadcrumb(route.toString());
     }
@@ -46,6 +48,7 @@ public class Navigator {
     private void handleBottomMenu(Route.BOTTOM_MENU route) {
         SelenideElement menuItem = $(MobileBy.xpath("//android.view.ViewGroup[@content-desc=\"" + route.toString() + "\"]"));
         assert menuItem.exists();
+        menuItem.click();
         appendBreadcrumb("Нижнее меню");
         appendBreadcrumb(route.toString());
     }
@@ -53,7 +56,11 @@ public class Navigator {
     private void handleMoreMenu(Route.SIDE_MENU.MORE route) {
         openSideMenu();
         SelenideElement moreMenu = $(MobileBy.xpath("//android.view.ViewGroup[@content-desc=\"Ещё\"]"));
-        if(moreMenu.exists()) moreMenu.click();
+        if (moreMenu.exists()) moreMenu.click();
+
+        SelenideElement menuItem = $(MobileBy.xpath("//android.widget.TextView[@resource-id=\"ru.ok.android:id/nav_menu_item_row_name\" and @text=\"" + route.toString() + "\"]"));
+        menuItem.click();
+
         appendBreadcrumb("Боковое меню/Ещё");
         appendBreadcrumb(route.toString());
     }

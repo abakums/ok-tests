@@ -8,6 +8,7 @@ import io.appium.java_client.MobileBy;
 
 public class DefaultControls {
 
-    private SelenideElement notification = $(MobileBy.xpath("//android.view.ViewGroup[@content-desc=\"Notifications\"]"));
-    private SelenideElement search = $(MobileBy.xpath("//android.view.ViewGroup[@content-desc=\"Menu\"]"));
+    protected final SelenideElement sideMenuBtn = $(MobileBy.xpath("//android.widget.ImageButton[@content-desc=\"Открыть боковое меню\"]"));
+    protected SelenideElement notification = $(MobileBy.xpath("//android.view.ViewGroup[@content-desc=\"Notifications\"]"));
+    protected SelenideElement search = $(MobileBy.xpath("//android.view.ViewGroup[@content-desc=\"Menu\"]"));
 }

@@ -6,7 +6,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public enum AuthorizationField implements FieldTitle{
-    LOGIN("e"),
+    LOGIN("e"), //TODO название поля
     PASSWORD("Password")
 
     ;
